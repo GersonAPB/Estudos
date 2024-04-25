@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilogeral.css">
+    <script src="scriptsgerais.js"></script>
+    <script>
+        function teste() {
+            var horas = get('hora').value;
+            var salario = get('salario').value;
+            var bruto = horas * salario;
+            var IR = bruto * IRoo(bruto);
+            const INSS = bruto * 0.1;
+            const FGTS = bruto * 0.11;
+            const Sindicato = bruto * 0.03;
+            var desconto = IR + INSS + Sindicato;
+            var liquido = bruto - desconto;
+
+            texto('SB%', '(' + salario + "*" + horas + '): ');
+            texto('SB$', 'R$' + bruto);
+            texto('IR%', '(' + ((IRoo(bruto)) * 100).toFixed(2) + '%): ');
+            texto('IR$', 'R$' + IR);
+            texto('INSS%', '(' + (0.1 * 100) + '%): ');
+            texto('INSS$', 'R$' + INSS);
+            texto('FGTS%', '(' + (0.11 * 100) + '%): ');
+            texto('FGTS$', 'R$' + FGTS);
+            texto('SI%', '(' + (0.03 * 100) + '%): ');
+            texto('SI$', 'R$' + Sindicato);
+            texto('TD$', 'R$' + desconto);
+            texto('SL$', 'R$' + liquido);
+
+            function IRoo(bruto) {
+                var porcento;
+                if (bruto > 4664.68) {
+                    porcento = 0.275;
+                } else if (bruto > 3751.05) {
+                    porcento = 0.225;
+                } else if (bruto > 2826.65) {
+                    porcento = 0.15;
+                } else if (bruto > 2112.00) {
+                    porcento = 7.5;
+                } else {
+                    porcento = 0;
+                }
+                return porcento;
+            }
+        }
+
+    </script>
+</head>
+
+<body>
+    <div>
+        Insira o valor da sua hora de trabalho: <br>
+        <input type="number" id="salario"><br>
+        Insira as horas trabalhadas: <br>
+        <input type="number" id="hora"> <br>
+        <button onclick="teste()">Calcular</button>
+        <table style="width: 100%;">
+            <tr>
+                <td>Salário Bruto:</td>
+                <td id="SB%"></td>
+                <td id="SB$"></td>
+            </tr>
+            <tr>
+                <td>(-)IR:</td>
+                <td id="IR%"></td>
+                <td id="IR$"></td>
+            </tr>
+            <tr>
+                <td>(-)INSS:</td>
+                <td id="INSS%"></td>
+                <td id="INSS$"></td>
+            </tr>
+            <tr>
+                <td>FGTS:</td>
+                <td id="FGTS%"></td>
+                <td id="FGTS$"></td>
+            </tr>
+            <tr>
+                <td>(-)Sindicato:</td>
+                <td id="SI%"></td>
+                <td id="SI$"></td>
+            </tr>
+            <tr>
+                <td>Total de desconto:</td>
+                <td id="TD$" colspan="2"></td>
+            </tr>
+            <tr>
+                <td>Salário Liquido:</td>
+                <td id="SL$" colspan="2"></td>
+            </tr>
+        </table>
+    </div>
+
+</body>
+
+</html>

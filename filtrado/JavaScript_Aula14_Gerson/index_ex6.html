@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilogeral.css">
+    <script src="scriptsgerais.js"></script>
+    <script>
+
+        function teste() {
+            var numeros = [parseInt(get("n1").value), parseInt(get("n2").value), parseInt(get("n3").value)];
+            var txt = numeros.toSorted((a, b) => a - b);
+            texto('txt', txt)
+        }
+    </script>
+</head>
+
+<body>
+    <div>
+        Digite três digitos: <br>
+        Numero 1<input type="number" id="n1"> <br>
+        Numero 2<input type="number" id="n2"> <br>
+        Numero 3<input type="number" id="n3" onchange="teste()"> <br>
+        <p id="txt"></p>
+    </div>
+
+</body>
+
+</html>

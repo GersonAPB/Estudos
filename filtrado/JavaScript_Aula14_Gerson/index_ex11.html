@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilogeral.css">
+    <script src="scriptsgerais.js"></script>
+    <script>
+        function teste() {
+            var n1 = parseFloat(get("n1").value);
+            var n2 = parseFloat(get("n2").value);
+            var resultado = ((n1 + n2) / 2);
+            var conceito;
+            var apvrpv = 'APROVADO';
+            if (resultado < 4) {
+                conceito = 'E';
+                apvrpv = 'REPROVADO';
+            } else if (resultado < 6) {
+                conceito = 'D';
+                apvrpv = 'REPROVADO';
+            } else if (resultado < 7.5) {
+                conceito = 'C';
+            } else if (resultado < 9) {
+                conceito = 'B';
+            } else {
+                conceito = 'A';
+            }
+            texto('txt', 'Prova 1: ' + n1 + '<br>Prova 2: ' + n2 + '<br>Media: ' + resultado + '<br>Nota: ' + conceito + '<br>Situação: ' + apvrpv)
+        }
+    </script>
+</head>
+
+<body>
+    <div>
+        Calculo da media do Aluno: <br>
+        nota da primeira avaliação: <input type="number" id="n1"><br>
+        nota da segunda avaliação: <input type="number" id="n2">
+        <br>
+        <p id="txt"></p> <br>
+        <button onclick="teste()">Calcula</button>
+    </div>
+
+</body>
+
+</html>

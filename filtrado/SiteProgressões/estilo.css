@@ -1,0 +1,145 @@
+ /*Geral*/
+
+ body {
+  background-color: #C0FFFF;
+   margin: 0;
+ }
+
+ hr {
+   width: 80%;
+   border: 1px dashed #BFD7FF;
+ }
+
+ .conteudo {
+   text-align: center;
+ }
+
+ /*----------------------------------*/
+ /*Cabeçalho*/
+ .cabecalho {
+   background-color: #BFEBFF;
+   padding: 20px;
+ }
+
+ header {
+   font-size: medium;
+
+ }
+
+ h1 {
+   margin: 0;
+   width: 30vw;
+   display: inline;
+ }
+
+ header a {
+   text-decoration: none;
+   color: black;
+ }
+
+ header span {
+   float: right;
+ }
+
+ /*----------------------------------*/
+ /*Conteudo*/
+ .conteudo {
+   background-color: #BFEBFF;
+   z-index: 2;
+ }
+
+ section {
+   background-color: #C0FFFF;
+   padding: 5px;
+   width: 95%;
+   border-radius: 20px;
+   margin: 10px auto 20px auto;
+ }
+
+ p {
+   padding: 10px 0 10px 0;
+   text-indent: 2em;
+   font-size: 1em;
+   margin: auto;
+   text-align: justify;
+   width: 90%;
+ }
+
+ .radio {
+   cursor: pointer;
+ }
+
+ section button {
+   border: none;
+   border-radius: 10px;
+   cursor: pointer;
+   padding: 10px;
+   background-color: #BFD7FF;
+   margin: 20px;
+ }
+
+ section button:hover {
+   box-shadow: 2px 2px 5px #784DFF;
+   transition: 0.2s;
+ }
+
+ img {
+   width: 35%;
+ }
+
+ /*----------------------------------*/
+ /*Calculadoras*/
+ .calculadoras{
+  position: sticky;
+  top: 0;
+ }
+ .calc {
+   margin-top: 20px;
+   padding: 10px;
+   border-radius: 20px;
+   width: 22vw;
+   min-height: 25vh;
+   background-color:#BFD7FF;
+   box-shadow: 2px 2px 5px #784DFF;
+   display: none;
+ }
+
+ .calc input {
+   border: none;
+   border-radius: 4px;
+   width: 50%;
+ }
+
+ .calc span {
+   font-size: 2rem;
+   float: right;
+   cursor: pointer;
+ }
+
+ .calc button{
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+ }
+
+ .calc p{
+  font-size: 2rem;
+}
+
+ #geometrica {
+   display: none;
+ }
+
+ #aritmetica {
+   display: none;
+ }
+
+ /*----------------------------------*/
+ /*Rodapé*/
+
+ footer {
+   text-align: center;
+   font-size: 1rem;
+ }
+
+ /*----------------------------------*/

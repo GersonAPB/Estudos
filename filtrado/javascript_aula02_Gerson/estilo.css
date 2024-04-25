@@ -1,0 +1,18 @@
+.teste{
+    width: 50%;
+    height: 50%;
+    margin: auto;
+    background-color: aquamarine;
+    
+}
+
+.teste button {
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 5px;
+        border: none;
+        box-shadow: 1px 1px 5px black;
+       
+      }

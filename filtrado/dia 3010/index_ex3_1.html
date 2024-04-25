@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilogeral.css">
+    <script src="scriptsgerais.js"></script>
+    <script>
+        function teste() {
+            var n1 = parseFloat(get("n1").value);
+            var n2 = parseFloat(get("n2").value);
+            var n3 = parseFloat(get("n3").value);
+            var maior = Math.max(n1, n2, n3);
+            texto('txt', ("O maior entre eles é: " + maior))
+        }
+    </script>
+</head>
+
+<body>
+    <div>
+        Digite três digitos: <br>
+        Numero 1<input type="number" id="n1"> <br>
+        Numero 2<input type="number" id="n2"> <br>
+        Numero 3<input type="number" id="n3"> <br>
+        <button onclick="teste()">Qual o maior?</button>
+        <p id="txt"></p>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilogeral.css">
+    <script src="scriptsgerais.js"></script>
+    <script>
+
+        function teste() {
+            var a = parseFloat(get("va").value);
+            var b = parseFloat(get("vb").value);
+            var c = parseFloat(get("vc").value);
+            var delta;
+            var rdelta;
+            var x;
+            var xx;
+
+            delta = Math.pow(b, 2) - (4 * a * c);
+            rdelta = Math.sqrt(delta);
+            x = ((-1 * b) + rdelta) / (2 * a);
+            xx = ((-1 * b) - rdelta) / (2 * a);
+
+            if (a != 0) {
+                if (delta < 0) {
+                    texto('txt', 'Não existe raiz real');
+                } else if (delta == 0) {
+                    texto('txt', 'Raiz unica: ' + x);
+                } else {
+                    texto('txt', 'As raizes são: ' + x + ' e ' + xx);
+                }
+            } else {
+                texto('txt', 'Não é uma equação de segundo grau');
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div>
+        Calculando as raizes de uma equação de segundo grau: <br>
+        Escolha os valores para A, B e C (ax<sup>2</sup>+bx+c) <br>
+
+        a: <input type="number" id="va"><br>
+        b: <input type="number" id="vb"><br>
+        c: <input type="number" id="vc"> <br>
+        <button onclick="teste()">Calcular</button>
+        <p id="txt"></p>
+    </div>
+
+</body>
+
+</html>

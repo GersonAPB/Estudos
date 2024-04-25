@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilogeral.css">
+    <script src="scriptsgerais.js"></script>
+    <script>
+        function teste() {
+            var pontos = 0;
+            var identifica = 'vi';
+            for (let index = 0; index < 5; index++) {
+                if (get(identifica).checked) {
+                    pontos++
+                }
+                identifica += 'i';
+            }
+            
+            if (pontos==5) {
+                texto('txt', 'Assassino');
+            } else if (pontos>=3) {
+                texto('txt', 'Cúmplice');
+            } else if (pontos>=2) {
+                texto('txt', 'Suspeita');
+            } else {
+                texto('txt', 'Inocente');
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div>
+        Perguntas sobre o crime: <br>
+        <label for="telefone">Telefonou para a vítima?</label>
+        <input type="checkbox" id="vi"/> <br>
+        <label for="local">Esteve no local do crime?</label>
+        <input type="checkbox" id="vii"/> <br>
+        <label for="mora">Mora perto da vítima?</label>
+        <input type="checkbox" id="viii"/> <br>
+        <label for="deve">Devia para a vítima?</label>
+        <input type="checkbox" id="viiii"/> <br>
+        <label for="trabalho">Já trabalhou com a vítima?</label>
+        <input type="checkbox" id="viiiii"/> <br>
+        <button onclick="teste()">Investigar</button>
+        <p id="txt"></p>
+    </div>
+
+</body>
+
+</html>

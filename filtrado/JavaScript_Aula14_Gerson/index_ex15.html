@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilogeral.css">
+    <script src="scriptsgerais.js"></script>
+    <script>
+        function teste() {
+            var data = get('input').value.split('/');
+            var valida = validacao(data[0], data[1], data[2]);
+            if (valida == true){
+                texto('txt', data.join('/')+' é uma data valida');
+            } else {
+                texto('txt', data.join('/')+' não é uma data valida');
+            }
+        }
+        function validacao(dia, mes, ano) {
+
+            const data = new Date(ano, mes - 1, dia);
+
+            return (
+                data.getFullYear() == ano &&
+                data.getMonth() == mes - 1 &&
+                data.getDate() == dia
+            );
+        }
+    </script>
+</head>
+
+<body>
+    <div>
+        Digite uma data no formato dd/mm/aaaa: <br>
+        <input type="text" id="input" onchange="teste()">
+        <p id="txt"></p>
+    </div>
+
+</body>
+
+</html>

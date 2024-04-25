@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilogeral.css">
+    <script src="scriptsgerais.js"></script>
+    <script>
+        function teste() {
+            var select = get('valor').value;
+            if (select == 'M') {
+                texto('txt', 'BOM DIA');
+            } else if (select == 'V') {
+                texto('txt', 'BOA TARDE');
+            } else {
+                texto('txt', 'BOA NOITE');
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div>
+        Escolha o turno de estudo: <br>
+        <select id="valor" onchange="teste()">
+            <option value="M">Matutino</option>
+            <option value="V">Vespertino</option>
+            <option value="N">Noturno</option>
+        </select>
+        <p id="txt"></p>
+    </div>
+
+</body>
+
+</html>

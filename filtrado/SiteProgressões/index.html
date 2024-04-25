@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="grid.css">
+    <script src="script.js"></script>
+    <title>Progressões</title>
+</head>
+
+<body>
+
+    <header class="cabecalho"><h1>Progressões Matematicas</h1><span><a href="https://pt.wikipedia.org/wiki/Progress%C3%A3o_aritm%C3%A9tica" target="_blank">Saiba mais ></a></span></header>
+    <div class="row">
+        <div class="col-3 calculadoras">
+            <div class="calc" id="GPF">
+                Calculando Fibonacci: <span onclick="closeModal('GPF')">&times;</span> <br>
+                insira o numero de elementos:
+                <input type="number" id="gpf3" onchange="progressao('gpf','gpf1','gpf2','gpf3','txtf')">
+                <hr>
+                <p id="txtf"></p>
+            </div>
+        </div>
+        <div class="col-6 conteudo">
+            <section>
+                <h3>Progressões</h3>
+                <hr>
+                <p>Progressões matemáticas são sequências de números em que a diferença entre termos consecutivos é
+                    constante. Existem três tipos principais: progressão aritmética (PA), em que a diferença entre
+                    termos consecutivos é constante; progressão geométrica (PG), em que a razão entre termos
+                    consecutivos é constante; e progressão aritmética-geométrica (PAG), que combina elementos das duas.
+                    Essas progressões são úteis em diversas áreas da matemática e têm aplicações em problemas do mundo
+                    real.</p>
+
+                PA: <input type="radio" onchange="teste('RA','')" id="RA" class="radio"> PG: <input type="radio"
+                    onchange="teste('RG','')" id="RG" class="radio">
+                <hr>
+                <div id="aritmetica" class="elemeto">
+                    <h4>Progressão Aritmética</h4>
+                    <p>Uma Progressão Aritmética (PA) é uma sequência numérica em que a diferença entre quaisquer dois
+                        termos consecutivos é sempre a mesma constante, chamada de "razão" ou "diferença comum." Isso
+                        significa que, à medida que você avança na sequência, a cada termo, você adiciona ou subtrai a
+                        mesma quantidade.
+                        <br>
+                        A forma geral de uma PA é representada por:
+                    </p>
+                    a<sub>n</sub>=a<sub>1</sub>&plus;(n&minus;1)&times;r</sup> <br>
+                    <button class="button-56" role="button" onclick="teste('GAME','GPA')">Calculadora de PA</button>
+                </div>
+                <div id="geometrica" class="elemeto">
+                    <h4>Progressão Geométrica</h4>
+                    <p>A progressão geométrica (PG) é uma sequência de números em que cada termo, a partir do segundo, é
+                        obtido multiplicando o termo anterior por uma constante fixa chamada de "razão". A fórmula geral
+                        para uma progressão geométrica é:</p>
+                    a<sub>n</sub>=a<sub>1</sub>&times;r<sup>(n&minus;1)</sup> <br>
+                    <button onclick="teste('GAME','GPG')">Calculadora de PG</button>
+                </div>
+            </section>
+            <section>
+                <h3>Sequencia de Fibonacci</h3>
+                <hr>
+                <p>Sequência de Fibonacci é a sequência numérica proposta pelo matemático Leonardo Pisa, mais conhecido
+                    como Fibonacci: <br> Exemplo: 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987..... <br>
+
+                </p>
+                <p>Foi a partir de um problema criado por ele que o mesmo detectou a existência de uma regularidade
+                    matemática.
+                    Trata-se do exemplo clássico dos coelhos, em que Fibonacci descreve o crescimento de uma população
+                    desses animais. <br>
+                    - A sequência é definida mediante a seguinte fórmula: >
+                    F<sub>n</sub>=F<sub>n&minus;1</sub>&plus;F<sub>n&minus;2</sub> .<br>
+                </p>
+
+                <p>
+                    Assim, começando pelo 1, essa sequência é formada somando cada numeral com o numeral que o antecede.
+                    No caso do 1, repete-se esse numeral e soma-se, ou seja, 1 + 1 = 2.
+
+                    De seguida soma-se o resultado com o numeral que o antecede, ou seja, 2 + 1 = 3 e assim
+                    sucessivamente, numa sequência infinita.
+                </p>
+                <button onclick="teste('GAME','GPF')">Calculando Fibonacci</button>
+                <hr>
+                <h4>Retângulo de Ouro</h4>
+                <p>A partir da sequência de Fibonacci, pode ser construído um retângulo, que é chamado de Retângulo de Ouro. </p>
+                <img src="imagens/fibonacci.png"
+                    alt="Numero de ouro">
+                <p>Ao
+                    desenhar um arco dentro desse retângulo, obtemos, por sua vez, a Espiral de Fibonacci. A verdade é
+                    que a sequência de Fibonacci pode ser percebida na natureza. </p>
+                <img src="imagens/concha.png"
+                    alt="Concha" style=" transform: rotateY(180deg);">
+                    <p>São exemplos disso as folhas das
+                        árvores, as pétalas das rosas, os frutos como o abacaxi, as conchas espiraladas dos caracóis ou as
+                        galáxias.</p>
+                
+            </section>
+        </div>
+        <div class="col-3 calculadoras" >
+            <div class="calc" id="GPA">
+                Calculadora de PA: <span onclick="closeModal('GPA')">&times;</span> <br>
+                Insira o valor do primero elemento:
+                <input type="number" id="gpa1"> <br>
+                Insira o valor da razão da PA: <br>
+                <input type="number" id="gpa2"> <br>
+                Insira o numero do termo desejado: <br>
+                <input type="number" id="gpa3">
+                <button onclick="progressao('gpa','gpa1','gpa2','gpa3','txta')">></button>
+                <hr>
+                <p id="txta"></p>
+            </div>
+            <div class="calc" id="GPG">
+                Calculadora de PG: <span onclick="closeModal('GPG')">&times;</span> <br>
+                Insira o valor do primero elemento:
+                <input type="number" id="gpg1"> <br>
+                Insira o valor da razão da PA: <br>
+                <input type="number" id="gpg2"> <br>
+                Insira o numero do termo desejado: <br>
+                <input type="number" id="gpg3">
+                <button onclick="progressao('gpg','gpg1','gpg2','gpg3','txtg')">></button>
+                <hr>
+                <p id="txtg"></p>
+            </div>
+            
+        </div>
+    </div>
+    <footer class="cabecalho">&copy;Progressões matematicas - Gerson Belniowski Junior - Grupo Fibonas.</footer>
+
+
+</body>
+
+</html>

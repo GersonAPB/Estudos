@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilogeral.css">
+    <script src="scriptsgerais.js"></script>
+    <script>
+        function teste() {
+            var num = parseInt(get('input').value);
+            var centenas = Math.floor((num / 100) % 10);
+            var dezenas = Math.floor((num / 10) % 10);
+            var unidades = Math.floor(num % 10);
+            var resultado = '';
+
+            if (centenas > 0) {
+                resultado += `${centenas} centena${centenas > 1 ? 's' : ''}`;
+            }
+
+            if (dezenas > 0) {
+                if (resultado !== '') {
+                    resultado += dezenas > 0 ? ', ' : ' e ';
+                }
+                resultado += `${dezenas} dezena${dezenas > 1 ? 's' : ''}`;
+            }
+
+            if (unidades > 0) {
+                if (resultado !== '') {
+                    resultado += ' e ';
+                }
+                resultado += `${unidades} unidade${unidades > 1 ? 's' : ''}`;
+            }
+
+            texto('txt', `${num} = ${resultado}`);
+        }
+
+    </script>
+</head>
+
+<body>
+    <div>
+        Digite um numero: <br>
+        <input type="text" id="input" onchange="teste()" maxlength="3">
+        <p id="txt"></p>
+    </div>
+
+</body>
+
+</html>

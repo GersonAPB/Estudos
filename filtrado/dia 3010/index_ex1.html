@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilogeral.css">
+    <script src="scriptsgerais.js"></script>
+    <script>
+        const vogais = ["a", "e", "i", "o", "u"];
+        function teste() {
+            var letra = get('input').value;
+            if (vogais.includes(letra)) {
+                texto('txt', 'é vogal');
+            } else {
+                texto('txt', 'é consoante');
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div>
+        Digite uma letra: <br>
+        <input type="text" id="input" onchange="teste()" maxlength="1">
+        <p id="txt"></p>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,16 @@
+
+div{
+    margin: auto;
+    text-align: center;
+    background-color: gray;
+    width: auto;
+    max-width: 30%;
+    border: 2px dashed black;
+    border-radius: 20px;
+    min-height: 70px;
+    padding: 10px;
+}
+input{
+    text-align: center;
+    border-radius: 10px;
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        body {
+            text-align: center;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        .coisa {
+            margin: auto;
+            width: 20%;
+            background-color: lightgrey;
+            padding: 5px;
+            border-radius: 10px;
+        }
+
+        .coisa h2 {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            padding: 5px;
+            border-radius: 10px;
+            background-color: white;
+        }
+
+        input {
+            padding: 5px;
+            border-radius: 10px;
+            border: none;
+        }
+
+        p {
+            padding: 5px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            text-indent: 1.5em;
+            text-align: justify;
+        }
+    </style>
+    <script>
+        function get(id) {
+            return document.getElementById(id);
+        };
+        function robson() {
+            var nome = get("nome").value;
+            var idade = get("Idade").value;
+            var texto = get("txt"); 
+            var idadeMax = 65;
+            var i = -1;
+            var digite;
+            if (isNaN(nome) && (nome != "") && (isNaN(idade) == false)) {
+                
+                if (idade >= idadeMax) {
+                    digite = ("Ola, " + nome + " sua aposentadoria foi aprovada, entre em contato com nossa linha de atendimento ou em um de nossos pontos de atendimento.");
+                    escrevendo();
+                    
+                } else {
+                    digite = ("Ola, " + nome + " a aposentadoria não foi validada, ainda são necessarios: " + (parseInt(idadeMax - idade)) + " anos, de contribuição.");
+                    escrevendo();
+                    
+                };
+            } else {
+                digite = ("insira um nome e idade valida.");
+                escrevendo();
+               
+            };
+
+            function escrevendo() {
+                var velocidade = 10;
+                if (i < digite.length) {
+                    texto.innerHTML += digite.charAt(i);
+                    i++;
+                    setTimeout(escrevendo, velocidade);
+                }
+            }
+            texto.innerHTML = "";
+        };
+            
+    </script>
+</head>
+
+<body>
+    Gerson previdencia privada:
+    <div class="coisa">
+        <h2>Digite seu nome: </h2><input type="text" id="nome">
+        <h2>Digite sua idade: </h2><input type="text" id="Idade" onchange="robson()">
+        <p id="txt"></p>
+    </div>
+
+</body>
+
+</html>

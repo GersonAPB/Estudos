@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilogeral.css">
+    <script src="scriptsgerais.js"></script>
+    <script>
+        function teste() {
+            var litros = get('input').value;
+            var tipo = get('valor').value;
+            var valor;
+            if (tipo=="G") {
+                let gasolina = 5.98;
+                if (litros<20) {
+                    valor = (gasolina-(gasolina*0.04))*litros;
+                } else {
+                    valor = (gasolina-(gasolina*0.06))*litros;
+                }
+            } else if (tipo=="A") {
+                let alcool = 4.88;
+                if (litros<20) {
+                    valor = (alcool-(alcool*0.03))*litros;
+                } else {
+                    valor = (alcool-(alcool*0.05))*litros;
+                }
+            }
+            texto('txt', `${valor} litros de combustivel`);
+            
+        }
+    </script>
+</head>
+
+<body>
+    <div>
+        Posto: <br>
+        <select id="valor">
+            <option value="null">...   </option>
+            <option value="G">Gasolina</option>
+            <option value="A">Alcool</option>
+        </select><br>
+        Quantos litros: <br>
+        <input type="number" id="input" onchange="teste()">
+        <p id="txt"></p>
+    </div>
+
+</body>
+
+</html>

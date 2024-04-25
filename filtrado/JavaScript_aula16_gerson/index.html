@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilogeral.css">
+    <script src="scriptsgerais.js"></script>
+    <script>
+        function teste(op) {
+            var n1 = parseFloat(get('input1').value);
+            var n2 = parseFloat(get('input2').value);
+            var resultado;
+            switch (op) {
+                case '+':
+                resultado = n1 + n2;
+                    break;
+                case '-':
+                resultado = n1 - n2;
+                    break;
+                case '*':
+                resultado = n1 * n2;
+                    break;
+                case '/':
+                resultado = n1 / n2;
+                    break;
+                default:
+                    break;
+            }
+            texto('txt',resultado)
+        }
+    </script>
+</head>
+
+<body>
+    <div>
+
+        Calculadora: Digite valores. <br>
+        Primeiro:<input type="number" id="input1">Segundo:<input type="number" id="input2"><br>
+        <fieldset>
+            <legend>Selecione uma operação:</legend>
+            <input type="radio" id="op+" name="op" onclick="teste('+')" />
+            <label for="op+">Soma</label>
+            <input type="radio" id="op-" name="op" onclick="teste('-')" />
+            <label for="op-">Subtração</label>
+            <input type="radio" id="op*" name="op" onclick="teste('*')" />
+            <label for="op*">Multiplicação</label>
+            <input type="radio" id="op/" name="op" onclick="teste('/')" />
+            <label for="op/">Divisão</label>
+        </fieldset>
+        <p id="txt"></p>
+    </div>
+
+</body>
+
+</html>

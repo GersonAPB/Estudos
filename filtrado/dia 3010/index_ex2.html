@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilogeral.css">
+    <script src="scriptsgerais.js"></script>
+    <script>
+        function teste() {
+            var n1 = parseFloat(get("n1").value);
+            var n2 = parseFloat(get("n2").value);
+            var resultado = ((n1 + n2) / 2);
+            if (resultado == 10) {
+                texto('txt', ('Media: ' + resultado + ' Aprovado com distinção'));
+            } else if (resultado >= 7) {
+                texto('txt', ('Media: ' + resultado + ' Aprovado'));
+            } else {
+                texto('txt', ('Media: ' + resultado + ' reprovado'));
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div>
+        Calculo da media do Aluno: <br>
+        nota da primeira avaliação: <input type="number" id="n1"><br>
+        nota da segunda avaliação: <input type="number" id="n2">
+        <br>
+        <p id="txt"></p> <br>
+        <button onclick="teste()">testa</button>
+    </div>
+
+</body>
+
+</html>

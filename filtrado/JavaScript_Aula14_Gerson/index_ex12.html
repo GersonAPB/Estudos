@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilogeral.css">
+    <script src="scriptsgerais.js"></script>
+    <script>
+        function teste() {
+            var n1 = parseFloat(get("n1").value);
+            var n2 = parseFloat(get("n2").value);
+            var n3 = parseFloat(get("n3").value);
+
+            if ((n1 + n2) > n3 || (n2 + n3) > n1) {
+                if (n1 == n2 && n1 == n3) {
+                    texto('txt', 'Será Equilátero');
+                } else if (n1 == n2 || n1 == n3 || n2 == n3) {
+                    texto('txt', 'Será Isósceles');
+                } else {
+                    texto('txt', 'Será Escaleno');
+                }
+            } else {
+                texto('txt', 'Não pode ser um triangulo');
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div>
+        Digite o valor dos três lados do triangulo: <br>
+        Lado 1<input type="number" id="n1"> <br>
+        Lado 2<input type="number" id="n2"> <br>
+        Lado 3<input type="number" id="n3"> <br>
+        <button onclick="teste()">Que tipo de triangulo?</button>
+        <p id="txt"></p>
+    </div>
+</body>
+
+</html>

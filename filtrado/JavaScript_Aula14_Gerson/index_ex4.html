@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilogeral.css">
+    <script src="scriptsgerais.js"></script>
+    <style>
+        p {
+            width: 20%;
+            background-color: azure;
+            border-radius: 10px;
+            display: inline-table;
+        }
+    </style>
+    <script>
+        var nm1;
+        var nm2;
+        function teste() {
+            var n1 = get("n1").value;
+            var n2 = get("n2").value;
+            texto('txtn1', n1);
+            texto('txtn2', n2);
+            nm1 = n1;
+            nm2 = n2;
+        }
+        function troca() {
+            n1 = nm1;
+            n2 = nm2;
+            nm2 = n1;
+            nm1 = n2;
+            texto('txtn1', nm1);
+            texto('txtn2', nm2);
+        }
+    </script>
+</head>
+
+<body>
+    <div>
+        Digite dois valores: <br>
+        <input type="number" id="n1"> <br>
+        <input type="number" id="n2">
+        <br>
+        <button onclick="teste()">Gravar</button> <br>
+        <p id="txtn1"></p> -----A magia da troca de posição------
+        <p id="txtn2"></p>
+        <br>
+        <button onclick="troca()">Trocar as posições</button>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,131 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  [class*="col-"] {
+    float: left;
+    padding: 15px;
+  
+  }
+  
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;}
+
+  /*-------------------------------*/
+  /*Geral*/
+
+  *{
+    font-family: celta;
+  }
+  body{
+    margin: 0px;
+    background-color: wheat;
+    overflow-x: hidden;
+  }
+
+  .icon{
+    height: 20vh;
+  }
+
+  .central{
+    text-align: center;
+  }
+
+  h4{
+    margin: 0px;
+  }
+
+  @font-face {
+    font-family: celta;
+    src: url(Celtica-Book.ttf);
+ }
+
+ a{
+  text-decoration: none;
+ }
+   /*-------------------------------*/
+    /*cabeçalho*/
+    .cabecalho h3{
+        font-size: 2em;
+        font-family: celta;
+        margin: 0px;
+        color: black;
+    }
+
+  /*-------------------------------*/
+    /*nav*/
+    .rolagem{
+        padding: 0px;
+        margin: 0px;
+        background-color: #695F4C;
+    }
+
+    footer{
+        background-color: #695F4C;
+        color: #f5deb3;
+    }   
+  /*-------------------------------*/
+    /*Conteudo*/
+    .conteudo{
+        background-color: #BDAB8A;
+    }
+    .conteudo article{
+        background-color: #f5deb3;
+        padding: 20px;
+        margin-bottom: 10px;
+        border-radius: 20px;
+    }
+    .conteudo a{
+        
+        color: black;
+        padding: 5px;
+        border-radius: 5px;
+        background-color: #BDAB8A;
+    }
+
+    .conteudo #livrosPresentes{
+      text-align: left
+    }
+    
+  /*-------------------------------*/
+    /*Animação*/
+    .promocoes{
+        color: #f5deb3;
+        position: relative;
+        font-size: 1.5em;
+        animation-name: roda;
+        animation-duration: 20s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
+
+    @keyframes roda {
+        0%   {left:-50vw;}
+        12,5%   {left:-30vw;}
+        25%  {left:-10vw;}
+        37,5%  {left:10vw;}
+        50%  {left:30vw;}
+        62,5% {left:50vw;}
+        75% {left:70vw;}
+        87,5% {left:90vw;}
+        100% {left:110vw;}
+      }
+
+
+    

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilogeral.css">
+    <script src="scriptsgerais.js"></script>
+    <script>
+        function teste() {
+            var salario = parseFloat(get('input').value);
+            var reajuste;
+            if (salario > 2500) {
+                reajuste = salario + salario * 0.05;
+                mostra(salario, '5%', (reajuste - salario), reajuste);
+            } else if (salario > 1700) {
+                reajuste = salario + salario * 0.1;
+                mostra(salario, '10%', (reajuste - salario), reajuste);
+            } else if (salario > 1280) {
+                reajuste = salario + salario * 0.15;
+                mostra(salario, '15%', (reajuste - salario), reajuste);
+            } else {
+                reajuste = salario + salario * 0.20;
+                mostra(salario, '20%', (reajuste - salario), reajuste);
+            }
+            function mostra(salario, percentual, aumento, reajuste) {
+                texto('txt', 'Seu salario antes do reajuste: ' + salario + '<br>O percentual de aumento foi: ' + percentual + '<br>O aumento efetivo foi: ' + aumento.toFixed(2) + '<br>E por fim o salario afinal ficou: ' + reajuste)
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div>
+        Insira seu salario atual: <br>
+        <input type="number" id="input" onchange="teste()">
+        <p id="txt"></p>
+    </div>
+
+</body>
+
+</html>

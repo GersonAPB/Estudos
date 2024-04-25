@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilogeral.css">
+    <script src="scriptsgerais.js"></script>
+    <script>
+        function teste(operador) {
+            var num1 = parseFloat(get('input1').value);
+            var num2 = parseFloat(get('input2').value);
+            var resultado;
+
+            switch (operador) {
+                case 'soma':
+                    resultado = num1 + num2;
+                    break;
+                case 'subtracao':
+                    resultado = num1 - num2;
+                    break;
+                case 'multiplicacao':
+                    resultado = num1 * num2;
+                    break;
+                case 'divisao':
+                    resultado = num1 / num2;
+                    break;
+                default:
+                    resultado = 'Operação inválida';
+            }
+
+
+            texto('txt', `${resultado} o valor obtido é ${resultado%2==0 ? 'Par' : 'Impar'}, ${resultado > 0? 'Positivo' : ''}${resultado < 0? 'Negativo' : ''} e ${Number.isInteger(resultado) ? 'Inteiro' : 'Decimal'} ` );
+
+        }
+    </script>
+</head>
+
+<body>
+    <div>
+        Calculadora: <br>
+        <input type="number" id="input1">
+        <input type="number" id="input2"> <br>
+        <button onclick="teste('soma')">+</button>
+        <button onclick="teste('subtracao')">-</button>
+        <button onclick="teste('multiplicacao')">X</button>
+        <button onclick="teste('divisao')">/</button>
+        <p id="txt"></p>
+    </div>
+
+</body>
+
+</html>

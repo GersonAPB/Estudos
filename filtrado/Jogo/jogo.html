@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script src="script.js"> </script>
+		<script src="cenas.js"> </script>
+		<script src="gatilhos.js"> </script>
+		<link rel="stylesheet" type="text/css" href="estilo.css" />
+		<link rel="stylesheet" type="text/css" href="responsividade.css" />
+		<title>O Olho de Akhenon</title>
+	</head>
+	<body onload="prologo()">
+		<div id="modal">
+			<h1>O olho de Akhenon</h1>
+			<div id="eta">
+				<p id="p1"></p>
+				<p id="p2"></p>
+				<p id="p3"></p>
+			</div>
+			<button id="SetValue" onclick="setAtributosIniciais()">Start</button>
+		</div>
+		<div id="topo">
+			<h1>O olho de Akhenon</h1>
+		</div>
+		<div id="stats">
+			<table>
+				<tr>
+					<th colspan="2">Atributos</th>
+				</tr>
+				<tr>
+					<td>Inteligencia</td>
+					<td id="inteligenciaValue"></td>					
+				</tr>
+				<tr>
+					<td>Destreza</td>
+					<td id="destrezaValue"></td>
+				</tr>
+				<tr>
+					<td>Ataque</td>
+					<td id="ataqueValue"></td>
+				</tr>
+				<tr>
+					<td>Destino</td>
+					<td id="destinoValue"></td>
+				</tr>
+			</table>
+			<table>
+				<tr>
+					<td>Vida</td>
+					<td id="vidaValue"></td>					
+				</tr>
+				<tr>
+					<th colspan="2">Inventario</th>
+				</tr>
+				<tr>
+					<td>Tochas</td>
+					<td id="tochaValue"></td>					
+				</tr>
+				<tr>
+					<td colspan="2" id="inventario"></td>				
+				</tr>
+			</table>
+		</div>
+		<div id="historia">
+			<p id="boxHistoria">
+				
+
+			</p>
+		</div>
+		<div id="decisao">
+			
+		</div>
+
+	</body>
+</html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contatos | Apeperia</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Open+Sans:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/cabecalho.css">
+    <link rel="stylesheet" href="css/chamada.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/destaques.css">
+    <link rel="stylesheet" href="css/diferenciais.css">
+    <link rel="stylesheet" href="css/sobre.css">
+    <link rel="stylesheet" href="css/planos.css">
+    <link rel="stylesheet" href="css/contato.css">
+    <link rel="stylesheet" href="css/institucional.css">
+    <link rel="stylesheet" href="css/rodape.css">
+    <link rel="stylesheet" href="css/fom.css">
+</head>
+
+<body>
+    <header class="cabecalho container">
+        <img src="img/logo-apeperia.svg" alt="Logo da Apeperia" class="cabecalho__logo">
+        <nav class="cabecalho__navegacao">
+            <ul>
+                <li class="cabecalho__link"><a href="index.html">Inicial</a></li>
+                <li class="cabecalho__link"><a href="#">Sobre</a></li>
+                <li class="cabecalho__link"><a href="#">Planos</a></li>
+                <li class="cabecalho__link"><a href="#">Blog</a></li>
+                <li class="cabecalho__link"><a href="#">Destaques</a></li>
+                <li class="cabecalho__link"><a href="#">Institucional</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="chamada container">
+            <h1 class="chamada__titulo">Contato</h1>
+            <p class="chamada__texto">Preenchendo nosso formulario de contato você fica por dentro de todas as
+                atualizações da APEPERIA</p>
+        </section>
+        <section class="contato container">
+            <div class="contato__conteudo">
+                <form action="" method="get" class="contato_form">
+                    <div class="item_geral">
+                        <div class="nome_contato item_contato">
+                            <label for="nome">Nome:</label>
+                            <input type="text" name="nome" required />
+                        </div>
+                        <div class="sobrenome_contato item_contato">
+                            <label for="sobrenome">Sobrenome:</label>
+                            <input type="text" name="sobrenome" required />
+                        </div>
+                        <div class="email_contato item_contato">
+                            <label for="email">Email:</label>
+                            <input type="email" name="email" pattern="+@example\.com" required>
+                        </div>
+                        <div class="telefone_contato item_contato">
+                            <label for="telefone">Telefone:</label>
+                            <input type="tel" name="telefone" pattern="[0-9]{2}-[0-9]{5}-[0-9]{4}" required />
+                        </div>
+                    </div>
+
+                    <div class="contato_genero item_contato">
+                        <h6>Genero</h6>
+                        <div class="genero_op">
+                            <input type="radio" name="contato_genero" id="op1">
+                            <label for="op1">Masculino</label>
+                        </div>
+                        <div class="genero_op">
+                            <input type="radio" name="contato_genero" id="op2">
+                            <label for="op2">Feminino</label>
+                        </div>
+                        <div class="genero_op">
+                            <input type="radio" name="contato_genero" id="op3">
+                            <label for="op3">Não Binario</label>
+                        </div>
+                        <div class="genero_op">
+                            <input type="radio" name="contato_genero" id="op4">
+                            <label for="op4">Não informar</label>
+                        </div>
+
+                    </div>
+                    <div class="enviar_contato item_contato">
+                        <input type="submit" value="Enviar" class="contato__botao botao" />
+                    </div>
+                </form>
+
+            </div>
+            <div class="container-form">
+                <div class="form-image">
+                    <img src="img/undraw_shopping_re_hdd9.svg" alt="">
+                </div>
+                <div class="form">
+                    <form action="#">
+                        <div class="form-header">
+                            <div class="title">
+                                <h1>Cadastre-se</h1>
+                            </div>
+                            <div class="login-button">
+                                <button>
+                                    <a href="#">Entrar</a>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <div class="input-box">
+                                <label for="firstname">Primeiro nome</label><input type="text" name="firstname"
+                                    id="lasttname" placeholder="Seu nome...." required>
+                            </div>
+
+                            <div class="input-box">
+                                <label for="lastname">Sobre nome</label><input type="text" name="lastname" id="lastname"
+                                    placeholder="Seu sobrenome...." required>
+                            </div>
+
+                            <div class="input-box">
+                                <label for="email">Email</label><input type="email" name="email" id="email"
+                                    placeholder="Seu email...." pattern="@example.com" required>
+                            </div>
+
+                            <div class="input-box">
+                                <label for="numero">Telefone</label><input type="tel" name="numero" id="number"
+                                    placeholder="(XX) XXXXX-XXXX" required>
+                            </div>
+                            <div class="subtitle">
+                                <h3>Genero</h3>
+                            </div>
+                            <div class="gender-group">
+                                <div class="gender-input">
+                                    <input type="radio" id="female" name="gender"><label for="female">Feminino</label>
+                                </div>
+                                <div class="gender-input">
+                                    <input type="radio" id="male" name="gender"><label for="male">Masculino</label>
+                                </div>
+                                <div class="gender-input">
+                                    <input type="radio" id="other" name="gender"><label for="other">Outros</label>
+                                </div>
+                                <div class="gender-input">
+                                    <input type="radio" id="none" name="gender"><label for="none">Não informar</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="continue-button">
+                            <button><a href="#">Continuar</a></button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="rodape container">
+        <img src="img/logo-apeperia.svg" alt="Logo da Apeperia" class="rodape__logo">
+        <ul class="rodape__social">
+            <li><a href="#" class="rodape__midia"><img src="img/facebook.png" alt="Icone do Facebook"></a></li>
+            <li><a href="#" class="rodape__midia"><img src="img/twitter.png" alt="Icone do Twiter"></a></li>
+            <li><a href="#" class="rodape__midia"><img src="img/instagram.png" alt="Icone do Intagram"></a></li>
+        </ul>
+        <nav>
+            <ul class="rodape__navegacao">
+                <li class="rodape__link"><a href="#">Sobre</a></li>
+                <li class="rodape__link"><a href="#">Planos</a></li>
+                <li class="rodape__link"><a href="#">Blog</a></li>
+                <li class="rodape__link"><a href="#">Destaques</a></li>
+                <li class="rodape__link"><a href="#">Institucional</a></li>
+                <li class="rodape__link"><a href="#">Contato</a></li>
+            </ul>
+        </nav>
+    </footer>
+</body>
+
+</html>

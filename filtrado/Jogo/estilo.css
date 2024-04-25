@@ -1,0 +1,104 @@
+#modal{
+	position: fixed;
+	top: 0vh;
+	left: 0vw;
+	z-index: 2;
+	color: black;
+	background-color: #d2b48c;
+	width: 100vw;
+	height: 100vh;
+	opacity: 0.5;
+}
+
+#topo{
+	position: fixed;
+	top: 0vh;
+	left: 0vw;
+	width: 100vw;
+	height: 10vh;
+	background-color: silver;
+}
+
+#stats{
+	position: fixed;
+	top: 10vh;
+	left: 0vw;
+	width: 25vw;
+	height: 90vh;
+	background-color: steelblue;	
+}
+
+#historia{
+	position: fixed;
+	top: 10vh;
+	right: 0vw;
+	width: 75vw;
+	height: 80vh;
+	background-color: ghostwhite;		
+}
+
+#decisao{
+	position: fixed;
+	bottom: 0vh;
+	left: 25vw;
+	width: 75vw;
+	height: 25vh;
+	background-color: silver;
+}
+
+#eta{
+	position: fixed;
+	top: 10vh;
+	left: 25vw;
+	right: 25vw;
+	height: 75vh;
+}
+
+table, tr, td, th{
+	border: 1px solid ;
+	width: 23vw;
+	text-align: center;
+}
+
+table{
+	margin: 1vw;
+
+}
+#decisao button{
+	margin: 0.5vw;
+	width: 74vw;
+	display: block;
+}
+
+#historia p{
+	margin: 5vw;
+}
+
+h1{
+	text-align: center;
+}
+
+button{
+	background-color: silver;
+	border: none;
+	cursor: pointer;
+	text-align: left;
+}
+
+button:hover {
+  color: red;
+}
+
+#modal button{
+	position: absolute;
+	font-size: 3em;
+	left: 46vw;
+	bottom: 1vw;
+	padding: 20px;
+	border-radius: 15px;
+}
+
+p {
+  text-indent: 20px;
+  text-align: justify;
+}

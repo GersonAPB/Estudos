@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilogeral.css">
+    <script src="scriptsgerais.js"></script>
+    <script>
+        function teste() {
+            console.log('passo1');
+            var num = parseInt(get('input').value);
+            var cem;
+            var cic;
+            var vin;
+            var dez;
+            console.log('passo2');
+            if (num >= 10 && num <= 900) {
+                console.log('passo3');
+                cem = loop(num, 100);
+                cic = loop(num, 50);
+                vin = loop(num, 20);
+                dez = loop(num, 10);
+                var resultado = '';
+                if (cem > 0) {
+                    resultado += `${cem} nota${cem > 1 ? 's' : ''} de 100`;
+                }
+
+                if (cic > 0) {
+                    if (resultado !== '') {
+                        resultado += vin > 0 || dez > 0 ? ', ' : ' e ';
+                    }
+                    resultado += `${cic} nota${cic > 1 ? 's' : ''} de 50`;
+                }
+
+                if (vin > 0) {
+                    if (resultado !== '') {
+                        resultado += dez > 0 ? ', ' : ' e ';
+                    }
+                    resultado += `${vin} nota${vin > 1 ? 's' : ''} de 20`;
+                }
+
+                if (dez > 0) {
+                    if (resultado !== '') {
+                        resultado += ' e ';
+                    }
+                    resultado += `${dez} nota${dez > 1 ? 's' : ''} de 10`;
+                }
+                console.log('passo4');
+
+                texto('txt', `${resultado} <br>Faltando: ${num} Reais.`)
+            } else {
+                texto('txt', `${num} não é um valor disponivel`);
+            }
+            function loop(dinheiro, valor) {
+                var quantidade = 0;
+                while (valor <= dinheiro) {
+                    dinheiro -= valor;
+                    quantidade++;
+                    num = dinheiro;
+                }
+                return quantidade;
+            }   
+
+        }
+
+    </script>
+</head>
+
+<body>
+    <div>
+        Digite um valor para saque: <br>
+        <input type="number" id="input" onchange="teste()"> <br>
+        Valor maximo disponivel 900 reais, e minimo 10 reais.
+        <p id="txt"></p>
+    </div>
+
+</body>
+
+</html>
